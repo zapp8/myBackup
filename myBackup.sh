@@ -5,6 +5,24 @@ MYSQL_PASSWD=your_password
 BACKUP_DIR=/var/backups/mysql
  
 rm /var/tmp/database-temp
+
+case $# in
+0)
+;;
+
+1)
+ MYSQL_PASSWD=$1
+;;
+
+2)
+ MYSQL_USER=$1
+ MYSQL_PASSWD=$2
+;;
+
+*)
+ echo "Usage: $0 <mysql_user> <mysql_passwd> || <mysql_passwd>"
+;;
+esac
  
 echo "show databases" | mysql -b -u $MYSQL_USER --password=$MYSQL_PASSWD | grep -v ^Database > /var/tmp/database-temp
  
