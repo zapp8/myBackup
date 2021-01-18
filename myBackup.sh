@@ -7,16 +7,19 @@ BACKUP_DIR=/var/backups/mysql
 rm /var/tmp/database-temp
 
 case $# in
-0)
+0) 
+ # use username and password hardcoded
 ;;
 
 1)
  MYSQL_PASSWD=$1
+ # use the username hardcoded and the password as a parameter
 ;;
 
 2)
  MYSQL_USER=$1
  MYSQL_PASSWD=$2
+ # use username and password as parameters
 ;;
 
 *)
