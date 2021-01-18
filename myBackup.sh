@@ -21,6 +21,7 @@ case $# in
 
 *)
  echo "Usage: $0 <mysql_user> <mysql_passwd> || <mysql_passwd>"
+ exit 0;
 ;;
 esac
  
