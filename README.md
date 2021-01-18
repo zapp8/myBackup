@@ -6,6 +6,7 @@ is a simple tool to backup mysql databases
 
 ## Usage
 `myBackup.sh <mysql_user> <mysql_passwd> || <mysql_passwd>`
+
 Note, if you use only the password as parameter the username used will be that hardcoded in the script
 
 ## External Links
